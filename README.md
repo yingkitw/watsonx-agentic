@@ -24,13 +24,20 @@ here a demo that show case how to do agentic with watsonx.ai
 
 ```mermaid
 graph TD
-    Requirement --> Planning
-    Planning --> Generate_Code
-    Generate_Code --> Run_Code
-    Run_Code --> Use_Tool
-    Use_Tool --> Run_Code
-    Run_Code --> Evaluate
-    Run_Code --> |Error| Revise_Code
+    subgraph Development
+        Requirement --> Planning
+        Planning --> Generate_Code
+        Generate_Code --> Run_Code
+    end
+
+    subgraph Execution
+        Run_Code --> Use_Tool
+        Use_Tool --> Run_Code
+        Run_Code --> Evaluate
+        Run_Code --> |Error| Revise_Code
+    end
+
+    Evaluate{Is it successful?}
     Evaluate -->|Success| Summary
     Evaluate -->|Fail| Revise_Code
     Revise_Code --> Run_Code
