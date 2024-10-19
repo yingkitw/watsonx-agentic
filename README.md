@@ -24,6 +24,10 @@ here a demo that show case how to do agentic with watsonx.ai
 
 ```mermaid
 graph TD
+    Development --> Context
+    Execution --> Context
+    Revise_Code --> Context
+
     subgraph Development
         Requirement --> Planning
         Planning --> Generate_Code
