@@ -35,10 +35,6 @@ graph TD
     Evaluate -->|Success| Summary
     Evaluate -->|Fail| Revise_Code
     Revise_Code --> Run_Code
-
-    %% Optional: Styling Nodes
-    classDef process;
-    class Requirement,Planning,Generate_Code,Run_Code,Use_Tool,Evaluate,Revise_Code,Summary process;
 ```
 
 ### 1) Planning
