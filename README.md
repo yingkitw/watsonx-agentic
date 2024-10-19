@@ -27,10 +27,10 @@ graph TD
     subgraph Development
         Requirement --> Planning
         Planning --> Generate_Code
-        Generate_Code --> Run_Code
     end
 
     subgraph Execution
+        Generate_Code --> Run_Code
         Run_Code --> Use_Tool
         Use_Tool --> Run_Code
         Run_Code --> Evaluate
