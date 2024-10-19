@@ -27,7 +27,6 @@ graph TD
     subgraph Development
         Requirement --> Planning
         Planning --> Generate_Code
-        Run_Code --> |Error| Revise_Code
     end
 
     subgraph Execution
@@ -35,15 +34,13 @@ graph TD
         Run_Code --> Use_Tool
         Use_Tool --> Run_Code
         Run_Code --> Evaluate
-        Revise_Code --> Run_Code
+        Run_Code --> |Error| Revise_Code
     end
 
-    subgraph Evaluate
-        Run_Code --> Evaluate
-        Evaluate{Is it successful?}
-        Evaluate -->|Success| Summary
-        Evaluate -->|Fail| Revise_Code
-    end
+    Evaluate{Is it successful?}
+    Evaluate -->|Success| Summary
+    Evaluate -->|Fail| Revise_Code
+    Revise_Code --> Run_Code
 ```
 
 ### 1) Planning
