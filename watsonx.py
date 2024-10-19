@@ -50,7 +50,7 @@ class WatsonxAI:
             # Parse the JSON response
             decoded_json = response.json()
             self.access_token = decoded_json["access_token"]
-            return self.access_token
+            # return self.access_token
             # print(f"Access Token: {access_token}")
         except requests.exceptions.RequestException as e:
             print(f"An error occurred: {e}")
