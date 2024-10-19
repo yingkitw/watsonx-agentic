@@ -30,8 +30,7 @@ graph TD
     Run_Code --> Use_Tool
     Use_Tool --> Run_Code
     Run_Code --> Evaluate
-    Run_Code --> Error
-    Error --> Revise_Code
+    Run_Code --> |Error| Revise_Code
     Evaluate -->|Success| Summary
     Evaluate -->|Fail| Revise_Code
     Revise_Code --> Run_Code
