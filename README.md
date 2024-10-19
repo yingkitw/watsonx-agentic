@@ -23,14 +23,19 @@ here a demo that show case how to do agentic with watsonx.ai
 ## steps:
 
 ```mermaid
-Requirement -> Planning
-Planning -> Gernerate Code
-Generate Code -> Run Code
-Run Code -> Use Tool
-Run Code -> Evaluate
-Evaluate -> Revise Code
-Revise Code -> Run Code
-Evaluate -> Summary
+graph TD
+    Requirement --> Planning
+    Planning --> Generate_Code
+    Generate_Code --> Run_Code
+    Run_Code --> Use_Tool
+    Run_Code --> Evaluate
+    Evaluate -->|Success| Summary
+    Evaluate -->|Fail: Revise Code based on Error| Revise_Code
+    Revise_Code --> Run_Code
+
+    %% Optional: Styling Nodes
+    classDef process fill:#f9f,stroke:#333,stroke-width:2px;
+    class Requirement,Planning,Generate_Code,Run_Code,Use_Tool,Evaluate,Revise_Code,Summary process;
 ```
 
 ### 1) Planning
