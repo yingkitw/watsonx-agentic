@@ -11,6 +11,7 @@ class WatsonxAI:
     GRANITE_34B_CODE_INSTRUCT = "ibm/granite-34b-code-instruct"
     GRANITE_13B_CHAT_V2 = "ibm/granite-13b-chat-v2"
     GRANITE_13B_INSTRUCT_V2 = "ibm/granite-13b-instruct-v2"
+    GRANOTE_3_8B_INSTRUCT = "ibm/granite-3-8b-instruct"
     GRANITE_20B_MULTILINGUAL = "ibm/granite-20b-multilingual"
     LLAMA_3_70B_INSTRUCT = "meta-llama/llama-3-70b-instruct"
 
